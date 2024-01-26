@@ -582,7 +582,7 @@ export const GooglePlacesAutocomplete = forwardRef((props, ref) => {
 
   const _onChangeText = (text) => {
     setStateText(text);
-    debounceData(text);
+    props.fetchEnable && debounceData(text);
   };
 
   const _handleChangeText = (text) => {
